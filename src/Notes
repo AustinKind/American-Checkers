@@ -1,0 +1,35 @@
+#Requirements
+-------------
+Two player game, white and black.
+Light square in bottom right corner.
+Each player starts with 12 pieces on a 8x8 checker-patterned board.
+Black moves first.
+Pieces are only allowed to be on dark squares and move one square diagonally.
+Single pieces can only move towards the opponent.
+Pieces can jump over one opponent piece to remove it from the game.
+A piece that jumps can do consecutive jumps.
+If you have a piece that can jump that turn, you have to jump that turn.
+If a piece reaches the final row, it becomes a King.
+King pieces can move any direction.
+
+#Win condition
+A player wins when their opponent cannot make a move, either because they have no pieces or their pieces are blocked in.
+
+
+
+
+#Design
+-------
+CheckerPiece class that represents a piece.
+	boolean isKing;
+	boolean isOpponent;
+	boolean hasMove()
+	boolean hasJump()
+	boolean move(int x, int y)
+	
+Player class that represents a player.
+	ArrayList<CheckerPiece> pieces;
+	boolean isOpponent;
+	
+Game class that sets up the board and starts the game.
+
